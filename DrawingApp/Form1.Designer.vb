@@ -38,8 +38,12 @@ Partial Class Form1
         Me.ClearButton = New System.Windows.Forms.Button()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.SaveButton = New System.Windows.Forms.Button()
+        Me.TrackBar2 = New System.Windows.Forms.TrackBar()
+        Me.TrackBar3 = New System.Windows.Forms.TrackBar()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TrackBar3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -62,12 +66,12 @@ Partial Class Form1
         '
         Me.TrackBar1.Location = New System.Drawing.Point(687, 137)
         Me.TrackBar1.Name = "TrackBar1"
-        Me.TrackBar1.Size = New System.Drawing.Size(104, 45)
+        Me.TrackBar1.Size = New System.Drawing.Size(153, 45)
         Me.TrackBar1.TabIndex = 2
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Button2.BackColor = System.Drawing.Color.DarkTurquoise
         Me.Button2.Location = New System.Drawing.Point(675, 12)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(26, 25)
@@ -148,7 +152,7 @@ Partial Class Form1
         '
         'ClearButton
         '
-        Me.ClearButton.Location = New System.Drawing.Point(687, 222)
+        Me.ClearButton.Location = New System.Drawing.Point(679, 270)
         Me.ClearButton.Name = "ClearButton"
         Me.ClearButton.Size = New System.Drawing.Size(75, 23)
         Me.ClearButton.TabIndex = 12
@@ -157,18 +161,40 @@ Partial Class Form1
         '
         'SaveButton
         '
-        Me.SaveButton.Location = New System.Drawing.Point(687, 252)
+        Me.SaveButton.Location = New System.Drawing.Point(679, 300)
         Me.SaveButton.Name = "SaveButton"
         Me.SaveButton.Size = New System.Drawing.Size(75, 23)
         Me.SaveButton.TabIndex = 13
         Me.SaveButton.Text = "Save"
         Me.SaveButton.UseVisualStyleBackColor = True
         '
+        'TrackBar2
+        '
+        Me.TrackBar2.Location = New System.Drawing.Point(687, 174)
+        Me.TrackBar2.Maximum = 100
+        Me.TrackBar2.Minimum = 10
+        Me.TrackBar2.Name = "TrackBar2"
+        Me.TrackBar2.Size = New System.Drawing.Size(153, 45)
+        Me.TrackBar2.TabIndex = 14
+        Me.TrackBar2.Value = 10
+        '
+        'TrackBar3
+        '
+        Me.TrackBar3.Location = New System.Drawing.Point(687, 225)
+        Me.TrackBar3.Maximum = 100
+        Me.TrackBar3.Minimum = 10
+        Me.TrackBar3.Name = "TrackBar3"
+        Me.TrackBar3.Size = New System.Drawing.Size(153, 45)
+        Me.TrackBar3.TabIndex = 15
+        Me.TrackBar3.Value = 10
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(865, 487)
+        Me.Controls.Add(Me.TrackBar3)
+        Me.Controls.Add(Me.TrackBar2)
         Me.Controls.Add(Me.SaveButton)
         Me.Controls.Add(Me.ClearButton)
         Me.Controls.Add(Me.Button9)
@@ -184,9 +210,11 @@ Partial Class Form1
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "Its Gender Time :)"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TrackBar3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -208,4 +236,6 @@ Partial Class Form1
     Friend WithEvents ClearButton As Button
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents SaveButton As Button
+    Friend WithEvents TrackBar2 As TrackBar
+    Friend WithEvents TrackBar3 As TrackBar
 End Class
