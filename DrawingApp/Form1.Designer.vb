@@ -40,6 +40,10 @@ Partial Class Form1
         Me.SaveButton = New System.Windows.Forms.Button()
         Me.TrackBar2 = New System.Windows.Forms.TrackBar()
         Me.TrackBar3 = New System.Windows.Forms.TrackBar()
+        Me.LineButton = New System.Windows.Forms.Button()
+        Me.CircleButton = New System.Windows.Forms.Button()
+        Me.RectangleButton = New System.Windows.Forms.Button()
+        Me.Button = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -152,7 +156,7 @@ Partial Class Form1
         '
         'ClearButton
         '
-        Me.ClearButton.Location = New System.Drawing.Point(679, 270)
+        Me.ClearButton.Location = New System.Drawing.Point(156, 438)
         Me.ClearButton.Name = "ClearButton"
         Me.ClearButton.Size = New System.Drawing.Size(75, 23)
         Me.ClearButton.TabIndex = 12
@@ -161,7 +165,7 @@ Partial Class Form1
         '
         'SaveButton
         '
-        Me.SaveButton.Location = New System.Drawing.Point(679, 300)
+        Me.SaveButton.Location = New System.Drawing.Point(253, 438)
         Me.SaveButton.Name = "SaveButton"
         Me.SaveButton.Size = New System.Drawing.Size(75, 23)
         Me.SaveButton.TabIndex = 13
@@ -188,11 +192,51 @@ Partial Class Form1
         Me.TrackBar3.TabIndex = 15
         Me.TrackBar3.Value = 10
         '
+        'LineButton
+        '
+        Me.LineButton.Location = New System.Drawing.Point(675, 276)
+        Me.LineButton.Name = "LineButton"
+        Me.LineButton.Size = New System.Drawing.Size(75, 23)
+        Me.LineButton.TabIndex = 16
+        Me.LineButton.Text = "Line"
+        Me.LineButton.UseVisualStyleBackColor = True
+        '
+        'CircleButton
+        '
+        Me.CircleButton.Location = New System.Drawing.Point(757, 276)
+        Me.CircleButton.Name = "CircleButton"
+        Me.CircleButton.Size = New System.Drawing.Size(75, 23)
+        Me.CircleButton.TabIndex = 17
+        Me.CircleButton.Text = "Circle"
+        Me.CircleButton.UseVisualStyleBackColor = True
+        '
+        'RectangleButton
+        '
+        Me.RectangleButton.Location = New System.Drawing.Point(675, 306)
+        Me.RectangleButton.Name = "RectangleButton"
+        Me.RectangleButton.Size = New System.Drawing.Size(75, 23)
+        Me.RectangleButton.TabIndex = 18
+        Me.RectangleButton.Text = "Rectangle"
+        Me.RectangleButton.UseVisualStyleBackColor = True
+        '
+        'Button
+        '
+        Me.Button.Location = New System.Drawing.Point(757, 306)
+        Me.Button.Name = "Button"
+        Me.Button.Size = New System.Drawing.Size(75, 23)
+        Me.Button.TabIndex = 19
+        Me.Button.Text = "Button13"
+        Me.Button.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(865, 487)
+        Me.Controls.Add(Me.Button)
+        Me.Controls.Add(Me.RectangleButton)
+        Me.Controls.Add(Me.CircleButton)
+        Me.Controls.Add(Me.LineButton)
         Me.Controls.Add(Me.TrackBar3)
         Me.Controls.Add(Me.TrackBar2)
         Me.Controls.Add(Me.SaveButton)
@@ -238,4 +282,8 @@ Partial Class Form1
     Friend WithEvents SaveButton As Button
     Friend WithEvents TrackBar2 As TrackBar
     Friend WithEvents TrackBar3 As TrackBar
+    Friend WithEvents LineButton As Button
+    Friend WithEvents CircleButton As Button
+    Friend WithEvents RectangleButton As Button
+    Friend WithEvents Button As Button
 End Class

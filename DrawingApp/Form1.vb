@@ -12,11 +12,22 @@
 
     Private Sub pictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseMove
         If m_Previous IsNot Nothing Then
-            Dim l As New Circle(PictureBox1.Image, m_Previous, e.Location)
-            l.Pen = New Pen(c, w)
-            l.w = TrackBar2.Value
-            l.h = TrackBar3.Value
-            m_shapes.Add(l)
+            Dim D As Object
+
+            If Type = "Line" Then
+                D = New Line(PictureBox1.Image, m_Previous, e.Location)
+                D.pen = New Pen(c, w)
+            End If
+            If Type = "Rectangle" Then
+                D = New Rectangle(PictureBox1.Image, m_Previous, e.Location)
+                D.pen = New Pen(c, w)
+            End If
+            If Type = "Circle" Then
+                D = New Circle(PictureBox1.Image, m_Previous, e.Location)
+                D.pen = New Pen(c, w)
+            End If
+
+            m_shapes.Add(D)
             PictureBox1.Invalidate()
             m_Previous = e.Location
         End If
@@ -95,5 +106,17 @@
     Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
         SaveFileDialog1.ShowDialog()
         PictureBox1.Image.Save(SaveFileDialog1.FileName)
+    End Sub
+
+    Private Sub LineButton_Click(sender As Object, e As EventArgs) Handles LineButton.Click
+        Type = "Line"
+    End Sub
+
+    Private Sub CircleButton_Click(sender As Object, e As EventArgs) Handles CircleButton.Click
+        Type = "Circle"
+    End Sub
+
+    Private Sub SquareButton_Click(sender As Object, e As EventArgs) Handles RectangleButton.Click
+        Type = "Rectangle"
     End Sub
 End Class
