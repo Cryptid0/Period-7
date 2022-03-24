@@ -43,7 +43,13 @@ Partial Class Form1
         Me.LineButton = New System.Windows.Forms.Button()
         Me.CircleButton = New System.Windows.Forms.Button()
         Me.RectangleButton = New System.Windows.Forms.Button()
-        Me.Button = New System.Windows.Forms.Button()
+        Me.ArcButton = New System.Windows.Forms.Button()
+        Me.PieButton = New System.Windows.Forms.Button()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.Button14 = New System.Windows.Forms.Button()
+        Me.Button15 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -219,21 +225,81 @@ Partial Class Form1
         Me.RectangleButton.Text = "Rectangle"
         Me.RectangleButton.UseVisualStyleBackColor = True
         '
-        'Button
+        'ArcButton
         '
-        Me.Button.Location = New System.Drawing.Point(757, 306)
-        Me.Button.Name = "Button"
-        Me.Button.Size = New System.Drawing.Size(75, 23)
-        Me.Button.TabIndex = 19
-        Me.Button.Text = "Button13"
-        Me.Button.UseVisualStyleBackColor = True
+        Me.ArcButton.Location = New System.Drawing.Point(757, 306)
+        Me.ArcButton.Name = "ArcButton"
+        Me.ArcButton.Size = New System.Drawing.Size(75, 23)
+        Me.ArcButton.TabIndex = 19
+        Me.ArcButton.Text = "Arc"
+        Me.ArcButton.UseVisualStyleBackColor = True
+        '
+        'PieButton
+        '
+        Me.PieButton.Location = New System.Drawing.Point(676, 336)
+        Me.PieButton.Name = "PieButton"
+        Me.PieButton.Size = New System.Drawing.Size(75, 23)
+        Me.PieButton.TabIndex = 20
+        Me.PieButton.Text = "Pie"
+        Me.PieButton.UseVisualStyleBackColor = True
+        '
+        'Button11
+        '
+        Me.Button11.Location = New System.Drawing.Point(757, 336)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(75, 23)
+        Me.Button11.TabIndex = 21
+        Me.Button11.Text = "Button11"
+        Me.Button11.UseVisualStyleBackColor = True
+        '
+        'Button12
+        '
+        Me.Button12.Location = New System.Drawing.Point(676, 365)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(75, 23)
+        Me.Button12.TabIndex = 22
+        Me.Button12.Text = "Button12"
+        Me.Button12.UseVisualStyleBackColor = True
+        '
+        'Button13
+        '
+        Me.Button13.Location = New System.Drawing.Point(757, 365)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(75, 23)
+        Me.Button13.TabIndex = 23
+        Me.Button13.Text = "Button13"
+        Me.Button13.UseVisualStyleBackColor = True
+        '
+        'Button14
+        '
+        Me.Button14.Location = New System.Drawing.Point(676, 395)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(75, 23)
+        Me.Button14.TabIndex = 24
+        Me.Button14.Text = "Button14"
+        Me.Button14.UseVisualStyleBackColor = True
+        '
+        'Button15
+        '
+        Me.Button15.Location = New System.Drawing.Point(757, 395)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(75, 23)
+        Me.Button15.TabIndex = 25
+        Me.Button15.Text = "Button15"
+        Me.Button15.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(865, 487)
-        Me.Controls.Add(Me.Button)
+        Me.Controls.Add(Me.Button15)
+        Me.Controls.Add(Me.Button14)
+        Me.Controls.Add(Me.Button13)
+        Me.Controls.Add(Me.Button12)
+        Me.Controls.Add(Me.Button11)
+        Me.Controls.Add(Me.PieButton)
+        Me.Controls.Add(Me.ArcButton)
         Me.Controls.Add(Me.RectangleButton)
         Me.Controls.Add(Me.CircleButton)
         Me.Controls.Add(Me.LineButton)
@@ -285,5 +351,11 @@ Partial Class Form1
     Friend WithEvents LineButton As Button
     Friend WithEvents CircleButton As Button
     Friend WithEvents RectangleButton As Button
-    Friend WithEvents Button As Button
+    Friend WithEvents ArcButton As Button
+    Friend WithEvents PieButton As Button
+    Friend WithEvents Button11 As Button
+    Friend WithEvents Button12 As Button
+    Friend WithEvents Button13 As Button
+    Friend WithEvents Button14 As Button
+    Friend WithEvents Button15 As Button
 End Class

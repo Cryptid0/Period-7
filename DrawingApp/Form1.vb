@@ -3,6 +3,7 @@
     Dim m_shapes As New Collection
     Dim c As Color
     Dim w As Integer
+    Dim type As String
 
 
     Private Sub pictureBox1_MouseDown(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseDown
@@ -13,7 +14,8 @@
     Private Sub pictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseMove
         If m_Previous IsNot Nothing Then
             Dim D As Object
-
+            D = New Line(PictureBox1.Image, m_Previous, e.Location)
+            D.pen = New Pen(c, w)
             If Type = "Line" Then
                 D = New Line(PictureBox1.Image, m_Previous, e.Location)
                 D.pen = New Pen(c, w)
@@ -21,10 +23,26 @@
             If Type = "Rectangle" Then
                 D = New Rectangle(PictureBox1.Image, m_Previous, e.Location)
                 D.pen = New Pen(c, w)
+                D.h = TrackBar2.Value
+                D.w = TrackBar3.Value
             End If
             If Type = "Circle" Then
                 D = New Circle(PictureBox1.Image, m_Previous, e.Location)
                 D.pen = New Pen(c, w)
+                D.h = TrackBar2.Value
+                D.w = TrackBar3.Value
+            End If
+            If type = "Arc" Then
+                D = New Arc(PictureBox1.Image, m_Previous, e.Location)
+                D.pen = New Pen(c, w)
+                D.h = TrackBar2.Value
+                D.w = TrackBar3.Value
+            End If
+            If type = "Pie" Then
+                D = New Pie(PictureBox1.Image, m_Previous, e.Location)
+                D.pen = New Pen(c, w)
+                D.h = TrackBar2.Value
+                D.w = TrackBar3.Value
             End If
 
             m_shapes.Add(D)
@@ -109,14 +127,22 @@
     End Sub
 
     Private Sub LineButton_Click(sender As Object, e As EventArgs) Handles LineButton.Click
-        Type = "Line"
+        type = "Line"
     End Sub
 
     Private Sub CircleButton_Click(sender As Object, e As EventArgs) Handles CircleButton.Click
-        Type = "Circle"
+        type = "Circle"
     End Sub
 
     Private Sub SquareButton_Click(sender As Object, e As EventArgs) Handles RectangleButton.Click
-        Type = "Rectangle"
+        type = "Rectangle"
+    End Sub
+
+    Private Sub ArcButton_Click(sender As Object, e As EventArgs) Handles ArcButton.Click
+        type = "Arc"
+    End Sub
+
+    Private Sub PieButton_Click(sender As Object, e As EventArgs) Handles PieButton.Click
+        type = "Pie"
     End Sub
 End Class
