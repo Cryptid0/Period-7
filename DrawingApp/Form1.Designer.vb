@@ -45,7 +45,7 @@ Partial Class Form1
         Me.RectangleButton = New System.Windows.Forms.Button()
         Me.ArcButton = New System.Windows.Forms.Button()
         Me.PieButton = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
+        Me.TriangleButton = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Button14 = New System.Windows.Forms.Button()
@@ -243,14 +243,14 @@ Partial Class Form1
         Me.PieButton.Text = "Pie"
         Me.PieButton.UseVisualStyleBackColor = True
         '
-        'Button11
+        'TriangleButton
         '
-        Me.Button11.Location = New System.Drawing.Point(757, 336)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(75, 23)
-        Me.Button11.TabIndex = 21
-        Me.Button11.Text = "Button11"
-        Me.Button11.UseVisualStyleBackColor = True
+        Me.TriangleButton.Location = New System.Drawing.Point(757, 336)
+        Me.TriangleButton.Name = "TriangleButton"
+        Me.TriangleButton.Size = New System.Drawing.Size(75, 23)
+        Me.TriangleButton.TabIndex = 21
+        Me.TriangleButton.Text = "Triangle"
+        Me.TriangleButton.UseVisualStyleBackColor = True
         '
         'Button12
         '
@@ -297,7 +297,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Button14)
         Me.Controls.Add(Me.Button13)
         Me.Controls.Add(Me.Button12)
-        Me.Controls.Add(Me.Button11)
+        Me.Controls.Add(Me.TriangleButton)
         Me.Controls.Add(Me.PieButton)
         Me.Controls.Add(Me.ArcButton)
         Me.Controls.Add(Me.RectangleButton)
@@ -353,7 +353,7 @@ Partial Class Form1
     Friend WithEvents RectangleButton As Button
     Friend WithEvents ArcButton As Button
     Friend WithEvents PieButton As Button
-    Friend WithEvents Button11 As Button
+    Friend WithEvents TriangleButton As Button
     Friend WithEvents Button12 As Button
     Friend WithEvents Button13 As Button
     Friend WithEvents Button14 As Button

@@ -44,6 +44,12 @@
                 D.h = TrackBar2.Value
                 D.w = TrackBar3.Value
             End If
+            If type = "Triangle" Then
+                D = New Triangle(PictureBox1.Image, m_Previous, e.Location)
+                D.pen = New Pen(c, w)
+                D.h = TrackBar2.Value
+                D.w = TrackBar3.Value
+            End If
 
             m_shapes.Add(D)
             PictureBox1.Invalidate()
@@ -144,5 +150,9 @@
 
     Private Sub PieButton_Click(sender As Object, e As EventArgs) Handles PieButton.Click
         type = "Pie"
+    End Sub
+
+    Private Sub TriangleButton_Click(sender As Object, e As EventArgs) Handles TriangleButton.Click
+        type = "Triangle"
     End Sub
 End Class
