@@ -47,14 +47,26 @@
             If type = "Triangle" Then
                 D = New Triangle(PictureBox1.Image, m_Previous, e.Location)
                 D.pen = New Pen(c, w)
+                D.radius = TrackBar4.Value
+                D.sides = TrackBar3.Value
                 D.h = TrackBar2.Value
                 D.w = TrackBar3.Value
             End If
+            If type = "En_gon" Then
+                D = New En_gon(PictureBox1.Image, m_Previous, e.Location)
+                D.pen = New Pen(c, w)
+            End If
+            If type = "Picture" Then
+                D = New PBox(PictureBox1.Image, m_Previous, e.Location)
+                D.h = TrackBar2.Value
+                D.w = TrackBar3.Value
+                D.picture = PictureBox2.Image
+            End If
 
             m_shapes.Add(D)
-            PictureBox1.Invalidate()
-            m_Previous = e.Location
-        End If
+                PictureBox1.Invalidate()
+                m_Previous = e.Location
+            End If
     End Sub
 
     Private Sub pictureBox1_MouseUp(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseUp
@@ -154,5 +166,21 @@
 
     Private Sub TriangleButton_Click(sender As Object, e As EventArgs) Handles TriangleButton.Click
         type = "Triangle"
+    End Sub
+
+    Private Sub EngonButton_Click(sender As Object, e As EventArgs) Handles EnGonButton.Click
+        type = "En_gon"
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        type = "Picture"
+    End Sub
+
+    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles PictureButton.Click
+        OpenFileDialog1.ShowDialog()
+    End Sub
+
+    Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialog1.FileOk
+        PictureBox2.Load(OpenFileDialog1.FileName)
     End Sub
 End Class
